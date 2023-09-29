@@ -67,17 +67,17 @@
 // CLEARING TIMERS
 // ---------------
 
-// const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
-// let i = 0;
-// function myCallback(a, b) {
-//     // Your code here
-//     // Parameters are purely optional.
-//     console.log(a);
-//     console.log(b);
-//     i++;
-//     if (i === 10) {
-//         console.warn('STOP');
-//         clearInterval(intervalID);
-//     }
-// }
+const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
+let i = 0;
+function myCallback(a, b) {
+    // Your code here
+    // Parameters are purely optional.
+    console.log(a);
+    console.log(b);
+    i++;
+    if (i === 10) {
+        console.warn('STOP');
+        clearInterval(intervalID);
+    }
+}
 

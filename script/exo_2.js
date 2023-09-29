@@ -133,9 +133,9 @@ function timeDisplay() {
     let displayText = '';
     if (days === 0) {
         if (hours === 0) {
-            if (minutes === 0) {
+            if (minutes === 0 ) {
                 // Affiche seulement les secondes si moins d'une minute s'est écoulée
-                displayText = remainingSeconds + ' seconde' + (remainingSeconds === 1 ? '' : 's');
+                displayText = remainingSeconds + ' seconde' + ((remainingSeconds === 1 || remainingSeconds === 0) ? '' : 's');
             } else {
                 // Affiche les minutes et les secondes
                 displayText = minutes + ' minute' + (minutes === 1 ? '' : 's') + ' ' +
