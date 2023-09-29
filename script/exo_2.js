@@ -114,9 +114,12 @@
 
 // Crée un élément h3 pour afficher le temps
 const display = document.createElement('h3');
+// display.className = 'timeGame';
 document.body.appendChild(display); // Ajoutez l'élément h3 au corps du document une seule fois
 
 let seconds = 0; // Compteur de secondes
+
+let displayText = '';
 
 /**
  * Fonction timeDisplay
@@ -130,7 +133,6 @@ function timeDisplay() {
     const remainingSeconds = seconds % 60; // Calcule le nombre de secondes restantes
 
     // Construit la chaîne de texte à afficher
-    let displayText = '';
     if (days === 0) {
         if (hours === 0) {
             if (minutes === 0 ) {
@@ -158,7 +160,10 @@ function timeDisplay() {
     display.textContent = displayText; // Met à jour le contenu de l'élément h3
 
     seconds++; // Incrémente le compteur de secondes
+
 }
 
 // Appelle la fonction timeDisplay toutes les 1000 millisecondes (1 seconde)
-setInterval(timeDisplay, 1000);
+// setInterval(timeDisplay, 1000);
+
+let timeWackAMole = setInterval(timeDisplay, 1000);
